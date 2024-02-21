@@ -1,0 +1,101 @@
+@url = http://localhost:5000
+@id=153febe7-f0e8-4802-9cde-fd31f4bd7ac1
+@authorid=
+@genreid=
+@publishinghouseid=3F434A59-8D06-4A25-B24F-1C10A3D99A8B
+
+
+###
+GET {{url}}/authors
+
+###
+GET {{url}}/authors/{{id}}
+
+
+###
+GET {{url}}/bookgenres
+
+###
+GET {{url}}/bookgenres/{{id}}
+
+
+###
+POST {{url}}/authors
+Content-Type: application/json
+
+{
+    "firstname": "Agatha",
+    "lastname": "Christie"
+}
+
+
+###
+PUT {{url}}/authors/{{id}}
+Content-Type: application/json
+
+{
+    "firstname": "Remigiusz",
+    "lastname": "Mróz"
+}
+
+###
+POST {{url}}/bookgenres
+Content-Type: application/json
+
+{
+    "genreName": "Thriller"
+}
+
+
+###
+PUT {{url}}/bookgenres/{{id}}
+Content-Type: application/json
+
+{
+    "genreName": "Kryminał"
+}
+
+###
+DELETE {{url}}/authors/{{id}}
+
+
+###
+POST {{url}}/publishinghouses
+Content-Type: application/json
+
+{
+    "publisher": "PWN"
+    
+}
+
+
+
+###
+POST {{url}}/books
+Content-Type: application/json
+
+{
+    "title": "Behawiorysta",
+    "publicationdate": "2010",
+    "authorid": "7AAEC06A-3F14-4E52-8030-447EAFF57F59",
+    "maingenreid": "153FEBE7-F0E8-4802-9CDE-FD31F4BD7AC1",
+    "publishinghouseid": "3F434A59-8D06-4A25-B24F-1C10A3D99A8B"
+
+}
+
+
+###
+PUT {{url}}/books/{{id}}
+Content-Type: application/json
+
+{
+
+    "title": "Iluzjonista",
+    "publicationdate": "2010",
+    "authorid": "7AAEC06A-3F14-4E52-8030-447EAFF57F59",
+    "maingenreid": "153FEBE7-F0E8-4802-9CDE-FD31F4BD7AC1",
+    "publishinghouseid": "3F434A59-8D06-4A25-B24F-1C10A3D99A8B"
+}
+
+###
+DELETE {{url}}/books/{{id}}
